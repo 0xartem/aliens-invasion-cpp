@@ -1,0 +1,9 @@
+Jupiter north=Tatooine south=Earth west=Mars east=SanJuperdino
+Tatooine south=Jupiter east=Naboo
+Kamino north=Endor south=SanJuperdino west=Naboo
+SanJuperdino south=Jakku west=Jupiter north=Kamino
+Mars east=Jupiter
+Earth north=Jupiter
+Naboo west=Tatooine east=Kamino
+Endor south=Kamino
+Jakku north=SanJuperdino

@@ -1,6 +1,6 @@
 # Aliens Invasion Cpp
 
-Alien Invasion prototype implemented using Python
+Alien Invasion prototype implemented using C++
 
 ## Getting Started
 

@@ -1,4 +1,4 @@
-# Project Title
+# Aliens Invasion Cpp
 
 Alien Invasion prototype implemented using Python
 

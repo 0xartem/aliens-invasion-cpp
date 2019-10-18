@@ -12,6 +12,6 @@ add_library(
         aliens-invasion-lib/aliens-manager.h
         aliens-invasion-lib/aliens-manager.cpp)
 
-add_executable(aliens-invasion-app aliens-invasion-app/main.cpp)
+add_executable(aliensappcpp aliens-invasion-app/main.cpp)
 
-target_link_libraries(aliens-invasion-app PRIVATE aliens-invasion-lib)
+target_link_libraries(aliensappcpp PRIVATE aliens-invasion-lib)

@@ -4,9 +4,13 @@ Alien Invasion prototype implemented using C++
 
 ## Getting Started
 
-
-## Running the tests
-
+```
+git clone https://github.com/artem-brazhnikov/aliens-invasion-cpp.git
+cd aliens-invasion-cpp
+cmake ./
+make
+```
+run aliensappcpp binary
 
 ## License
 

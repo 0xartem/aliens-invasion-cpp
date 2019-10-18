@@ -9,8 +9,8 @@ git clone https://github.com/artem-brazhnikov/aliens-invasion-cpp.git
 cd aliens-invasion-cpp
 cmake ./
 make
+start aliensappcpp executable
 ```
-run aliensappcpp binary
 
 ## License
 

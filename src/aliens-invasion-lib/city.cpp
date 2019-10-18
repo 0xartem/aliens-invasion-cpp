@@ -19,26 +19,11 @@ namespace aliens_invasion
 
     void City::SetDirection(const std::string &direction, const std::shared_ptr<City> &directionCity)
     {
-        if (direction == NORTH)
-        {
-            m_directions[NORTH] = directionCity;
-        }
-        else if (direction == SOUTH)
-        {
-            m_directions[SOUTH] = directionCity;
-        }
-        else if (direction == WEST)
-        {
-            m_directions[WEST] = directionCity;
-        }
-        else if (direction == EAST)
-        {
-            m_directions[EAST] = directionCity;
-        }
-        else
+        if (oppositeDirectionsMap.find(direction) == oppositeDirectionsMap.end())
         {
             throw std::runtime_error("Invalid city direction");
         }
+        m_directions[direction] = directionCity;
     }
 
     bool City::DirectionExists(const std::string &direction) const
@@ -124,9 +109,9 @@ namespace aliens_invasion
         if (m_alienFighters.first == nullptr || m_alienFighters.second == nullptr)
             return false;
 
-        for (auto &[direction, city] : m_directions)
+        for (auto &val : m_directions)
         {
-            city->RemoveOppositeConnectionIfExists(oppositeDirectionsMap[direction], m_name);
+            val.second->RemoveOppositeConnectionIfExists(oppositeDirectionsMap[val.first], m_name);
         }
         m_alienFighters.second.reset();
         m_alienFighters.first.reset();
@@ -138,9 +123,9 @@ namespace aliens_invasion
     {
         std::stringstream out;
         out << m_name << " ";
-        for (auto &[direction, city] : m_directions)
+        for (auto &val : m_directions)
         {
-            out << direction << "=" << city->Name() << " ";
+            out << val.first << "=" << val.second->Name() << " ";
         }
         if (showAlienIfExists && m_alienFighters.first != nullptr)
         {
